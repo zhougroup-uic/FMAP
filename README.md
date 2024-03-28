@@ -18,4 +18,4 @@ The fmapsq.js file is a stand-alone versions of FMAPS(q) for using in command li
     Atomistic Proteins Using Fast Fourier Transform, J Phys Chem B 123,
     8203-8215.
 * S. Qin and H.-X. Zhou (2024), Calculating Structure Factors of Protein
-    Solutions by Atomistic Modeling of Protein-Protein Interactions, [biorxiv](https://www.biorxiv.org/content/10.1101/2024.03.27.587040v1)
+    Solutions by Atomistic Modeling of Protein-Protein Interactions, [bioRxiv](https://www.biorxiv.org/content/10.1101/2024.03.27.587040v1)
