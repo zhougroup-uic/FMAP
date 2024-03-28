@@ -21,7 +21,7 @@ FFTW3, OPENMP, python2, numpy are required, gnuplot and ghostscript are optional
 
 #### Usage
 
-    [dir]/fmapb2 pro.pqr conc temp nthrd
+    [dir]/fmapb2 pro.pqr conc temp [nthrd]
 
 ### run directly in Linux
 
