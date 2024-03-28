@@ -1,7 +1,8 @@
 # FMAPS(q)
 
-FMAPS(q) is a code for calculating the structure factor, S(q), of a protein solution, by extending our fast Fourier transform-based modeling of atomistic protein-protein interactions (FMAP) approach. It takes the potential of mean force W(R) along the center-center distance of a pair of protein molecules and the protein diameter d as input. Both W(R) and d can be obtained from our [FMAPB2 web server](https://pipe.rcc.fsu.edu/fmapb2/)
+FMAPS(q) is a code for calculating the structure factor, S(q), of a protein solution, by extending our fast Fourier transform-based modeling of atomistic protein-protein interactions (FMAP) approach. It takes the potential of mean force W(R) along the center-center distance of a pair of protein molecules and the protein diameter d as input. Both W(R) and d can be obtained from our [FMAPB2 web server](https://pipe.rcc.fsu.edu/fmapb2/).
 
+We have implemented FMAPS(q) into a [FMAPSq web server](https://zhougroup-uic.github.io/FMAPSq/). 
 The fmapsq.js file is a stand-alone versions of FMAPS(q) for using in command line.
 
 
