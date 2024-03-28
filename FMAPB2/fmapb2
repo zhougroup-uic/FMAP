@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+if [ "$#" -lt 3 ]; then
+    echo "Usage: fmapb2 pro.pqr ionc temp [nthrd]"
+    exit
+else
+    ion=$2
+    temp=$3
+fi
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+export FMAPB2=$SCRIPT_DIR
+source $FMAPB2/scripts/fmapb2.rc
+
+if [ -s $1 ];then
+    cp $1 subA.pqr
+else
+    CheckFile $1
+fi
+echo $ion >ion.dat
+echo $temp >temp.dat
+np=`GetNumofProc "$4"`
+
+ulimit -s unlimited
+$FMAPB2/scripts/run.sh $np

@@ -1,0 +1,12 @@
+Bootstrap: docker
+From: ubuntu:18.04
+
+%post
+    apt-get -y update
+    apt-get -y install --no-install-recommends python python-numpy libfftw3-double3 gnuplot ghostscript
+
+%environment
+    export LC_ALL=C
+
+%runscript
+    bash

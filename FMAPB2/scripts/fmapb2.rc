@@ -1,0 +1,36 @@
+#!/bin/bash
+
+if [ ! -e $FMAPB2 ]
+then
+	echo please set FMAPB2 to path of the FmapB2
+	return 1
+fi
+
+if [ ! -f $FMAPB2/scripts/fmapb2.rc ]
+then
+	echo FMAPB2 was set to wrong directory,make sure the bin and scripts folds are there
+	return 1
+fi
+
+function CheckFile {
+	if [ ! -s $1 ]
+	then
+		echo File: $1 Not Exist
+		exit
+	fi
+}
+
+function GetNumofProc {
+    ncpu=`grep -c processor /proc/cpuinfo`
+    if [ "$1" == "" ]
+    then
+        np=$ncpu
+    elif [ "$1" -lt 1 ] || [ "$1" -gt $ncpu ]
+    then
+        np=$ncpu
+    else
+        np=$1
+    fi
+    echo $np
+    return
+}

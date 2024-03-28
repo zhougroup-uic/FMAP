@@ -1,0 +1,12 @@
+Bootstrap: docker
+From: centos:7
+
+%post
+    yum -y update
+    yum -y install fftw-libs-double libgomp python2 python2-numpy gnuplot ghostscript
+
+%environment
+    export LC_ALL=C
+
+%runscript
+    bash

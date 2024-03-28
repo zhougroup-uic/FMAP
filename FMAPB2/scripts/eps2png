@@ -1,0 +1,9 @@
+#!/bin/bash
+
+while [ "$1" != "" ]
+do
+	epsfile=$1
+	pngfile=${epsfile%.*}.png
+	gs -r300 -dEPSCrop -dTextAlphaBits=4 -sDEVICE=png16m -sOutputFile=$pngfile -dBATCH -dNOPAUSE $epsfile 1>/dev/null
+shift
+done

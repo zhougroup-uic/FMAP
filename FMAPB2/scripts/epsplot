@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ "$2" == "" ]
+then
+	cwd=$1
+	echo 'set term postscript eps enhanced color;plot' $cwd|gnuplot
+else
+	setting=$1
+	cwd=$2
+	echo 'set term postscript eps enhanced color;'$setting';plot' $cwd|gnuplot
+fi
