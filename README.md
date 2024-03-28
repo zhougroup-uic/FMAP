@@ -9,9 +9,11 @@ The fmapsq.js file released here is a stand-alone for using in command line.
 #### Usage
 
 If you directly enter protein concentration in molarity (mM):
+
     $ nodejs fmapsq.js Bltz.txt diam qstrt qstep Nq Cmol
 
 Alternatively, if you enter mass concentration (in mg/mL), then you need to also enter the protein molecular mass (in kDa):
+
     $ nodejs fmapsq.js Bltz.txt diam qstrt qstep Nq Cmas MW
 
 
