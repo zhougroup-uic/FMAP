@@ -1,0 +1,5 @@
+# FMAPB2 version 1.0, released on 03/29/2024
+
+This version has a small change from the version published in 2019. In the 2019 version, the cutoff distance, r<sub>cut</sub>, for calculating interaction energies between atomic pairs was set to 36 Å. In this release
+
+is increased 
