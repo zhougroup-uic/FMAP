@@ -1,6 +1,8 @@
 FMAPB2 version 1.0, released on 03/29/2024
 
-This version has a small change from the version published in 2019. In the 2019 version, the cutoff distance, r_cut, for calculating 
-interaction energies between atomic pairs was set to 36 Å. In this release, r_cut is increased to three times the Debye screeening length 
+This version has a small change from the version published in JPCB (2019). In the 2019 version, the cutoff distance, r_cut, for calculating 
+interaction energies between atomic pairs was set to 36 Å. In this release, r_cut is increased to three times the Debye screening length 
 when that value is below 36 Å. This increase ensures that r_cut is at least three times the Debye length, and is important for low ionic 
 strength.
+
+This change in calculating the pair interaction and running fmapb2 in command line are described in bioRxiv (2024).
