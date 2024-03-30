@@ -21,7 +21,7 @@ FFTW3, OPENMP, python2, and numpy are required; gnuplot and ghostscript are opti
 
 #### Usage
 
-    $ [dir]/fmapb2 pro.pqr ionc temp [nthrd]
+    $ [dir/]fmapb2 pro.pqr ionc temp [nthrd]
 
 ### run directly in Linux
 
