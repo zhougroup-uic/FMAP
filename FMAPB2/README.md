@@ -1,10 +1,10 @@
 # FMAPB2
 
-FMAPB2 implements FMAP, a method based on fast Fourier transform (FFT), to calculate second virial coefficients (B2) for proteins represented at the all-atom level in implicit solvent. FMAP stands for FFT-based Modeling of Atomistic Protein-protein interactions. In FMAPB2, we express terms of the protein-protein inteaction energy as correlation functions, and evaluate them by FFT. These terms include steric repulsion, nonpolar attraction (in the form of a Lennard-Jones potential), and electrostatic interactions (in the form of a Debye-Hückel potential).
+FMAPB2 implements FMAP, a method based on fast Fourier transform (FFT), to calculate second virial coefficients (B2) for proteins represented at the all-atom level in implicit solvent. FMAP stands for FFT-based Modeling of Atomistic Protein-protein interactions. In FMAPB2, we express terms of the protein-protein interaction energy as correlation functions, and evaluate them by FFT. These terms include steric repulsion, nonpolar attraction (in the form of a Lennard-Jones potential), and electrostatic interactions (in the form of a Debye-Hückel potential).
 
-The input to FMAPB2 is the structure of the protein, in PQR format. The user also sets the solvent condition, including ionic strength (ionc, in M) and temperature (temp, in celcius).
+The input to FMAPB2 is the structure of the protein, in PQR format. The user also sets the solvent condition, including ionic strength (ionc, in M) and temperature (temp, in Celsius).
 
-We have implemented FMAPB2 into a [FMAPB2 web server](https://pipe.rcc.fsu.edu/fmapb2/). The FMAPB2 package released here is a stand-alone version for using in command line.
+We have implemented FMAPB2 into a [FMAPB2 web server](https://pipe.rcc.fsu.edu/fmapb2/). The FMAPB2 package released here is a stand-alone version for use in command line.
 
 ### Requirements
 FFTW3, OPENMP, python2, and numpy are required; gnuplot and ghostscript are optional for graphics.
