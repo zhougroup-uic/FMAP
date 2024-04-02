@@ -54,6 +54,8 @@ A quick test could run in test directory in about one minutes to test setting
     $ ../fmapb2 -test ../example/subA.pqr 0.1 25
     $ diff parms.txt parms.txt.bak
 
+There're two ZeroDivisionErrors from python, as expected from calculating standard error from a single value.
+
 #### References:
 
 * S. Qin and H.-X. Zhou (2019), Calculation of second virial coefficients of atomistic proteins using fast Fourier transform. J. Phys. Chem. B 123, 8203-8215.
