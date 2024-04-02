@@ -5,12 +5,18 @@ if [ -f fmap.log ];then
 elif [ -f fmap.log.gz ];then
 	zgrep RG fmap.log.gz >fmap.log.RG
 fi
+if [ -f fmap.ern.gz ];then
+    nrot=`zcat fmap.ern.gz|grep -c "^vol"`
+else
+    nrot=`cat fmap.ern|grep -c "^vol"`
+fi
 
 nl=`wc -l  fmap.log.RG|awk '{print $1/6}'`
 split -l $nl -d -a 2 fmap.log.RG fmap.log.RG.
 
 xm=`wc -l  fmap.log.RG|awk '{print ($1/6-1)*0.6}'`
-awk '(NR>1){printf("%8.3f%16.5f\n",($2+0.5)*0.6,$3/4392.0)}' fmap.log.RG.00 >Bltz.txt
+
+awk '(NR>1){printf("%8.3f%16.5f\n",($2+0.5)*0.6,$3/'$nrot'.0)}' fmap.log.RG.00 >Bltz.txt
 fmapvr=`grep FMAPvr parms.txt|awk '{print $3}'`
 $FMAPB2/scripts/epsplot '
 set encoding iso_8859_1;
@@ -42,8 +48,8 @@ set key spacing 3;
 $FMAPB2/scripts/eps2png conv.eps
 
 temp=`grep Temperature parms.txt|awk '{print $3}'`
-tail -1 fmap.ern.v+e.msf.b22 |sed 's/4392/'$temp'/' >calc.temp.txt
-$FMAPB2/scripts/mattemp.sh 4392.0 >mattemp.txt
+tail -1 fmap.ern.v+e.msf.b22 |sed 's/^'$nrot'/'$temp'/' >calc.temp.txt
+$FMAPB2/scripts/mattemp.sh ${nrot}.0 >mattemp.txt
 awk '(NR>1){print  $1,$2}' mattemp.txt >tdep.txt
 $FMAPB2/scripts/epsplot '
 set size 0.55;

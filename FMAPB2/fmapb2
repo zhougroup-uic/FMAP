@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 
+if [ "$1" == "-test" ];then
+    export FMAPB2Test=true
+    shift
+else
+    export FMAPB2Test=Flase
+fi
+
 if [ "$#" -lt 3 ]; then
-    echo "Usage: fmapb2 pro.pqr ionc temp [nthrd]"
+    echo "Usage: fmapb2 [-test] pro.pqr ionc temp [nthrd]"
     exit
 else
     ion=$2

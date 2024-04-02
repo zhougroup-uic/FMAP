@@ -1,6 +1,8 @@
 #!/bin/bash
 
-set -x
+if [ "$FMAPB2Test" = true ];then
+    set -x
+fi
 ncpu=$1
 
 #tail -25 /proc/cpuinfo >test20.sh.cpuinfo
@@ -9,7 +11,11 @@ ncpu=$1
 export OMP_NUM_THREADS=$ncpu
 ln -sf $FMAPB2/dat/lattice.txt .
 ln -sf $FMAPB2/dat/evscl.lst .
-ln -sf $FMAPB2/dat/rotation_samples/oim15.eul .
+if [ "$FMAPB2Test" = true ];then
+    head -5 $FMAPB2/dat/rotation_samples/oim15.eul >oim15.eul
+else
+    ln -sf $FMAPB2/dat/rotation_samples/oim15.eul .
+fi
 ion=`grep ion parms.txt |awk '{print $3}'`
 temp=`grep Temperature parms.txt  |awk '{print $3}'`
 qscl=`grep qscl parms.txt |awk '{print $3}'`

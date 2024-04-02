@@ -1,0 +1,20 @@
+Temperature  :   2.98150000E+02 K
+kbt          :   5.92079218E-01 
+ion          :   1.00000000E-01 M
+qscl         :   1.06279716E+00 
+sdie         :   7.83474062E+01 
+kappa        :   1.04052622E-01 
+lambda       :   9.61052192E+00 angstrom
+vscl         :           0.160
+charge       :              10
+mass         :       14317.270 Da
+rcut         :          36.000 angstrom
+MaxR         :          26.511 angstrom
+blen         :             310
+FMAPvr       :          36.899 angstrom
+FMAPvco      :      210438.000 angstrom^3
+FMAPvs       :      153908.000 angstrom^3
+FMAPexb22    :           3.091 x 1e-4 mL mol / g^2
+FMAPb22      :           2.261 x 1e-4 mL mol / g^2
+FMAPexb22std :          0.0187 x 1e-4 mL mol / g^2
+FMAPb22std   :          0.0440 x 1e-4 mL mol / g^2

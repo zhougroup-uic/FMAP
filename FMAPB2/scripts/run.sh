@@ -7,6 +7,7 @@ source $FMAPB2/scripts/fmapb2.rc
 #prevent accidently multiple runs
 if [ -f parms.txt ] 
 then
+    echo "Error: parms.txt exsit, please remove parms.txt if you try to rerun."
 	exit
 fi
 

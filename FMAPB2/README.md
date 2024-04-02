@@ -25,7 +25,9 @@ FFTW3, OPENMP, python2, and numpy are required; gnuplot and ghostscript are opti
 
 ### run directly in Linux
 
-To reproduce the values in parms.txt.bak in example, go to example directory
+To reproduce the values in parms.txt.bak in example, go to example directory. 
+
+The memory requirement could be estimated from the side length of the cubic grid (blen in parms.txt or parms.txt.bak here), 8\*(blen<sup>3</sup>\*8+4001<sup>2</sup>)/1e9 GB, it take about 5 hours with 16 threads on Intel(R) Xeon(R) CPU E5-2650. In case of larger blen, the memeory and time will increase.
 
     $ cd example
     $ ../fmapb2 subA.pqr 0.1 25
@@ -43,6 +45,14 @@ Use a web browser to open the index.html to show a similar page as in the web se
 
     $ cd example
     $ apptainer exec ../fmapsys.sif ../fmapb2 subA.pqr 0.1 25
+
+### quick test
+
+A quick test could run in test directory in about one minutes to test setting
+
+    $ cd test
+    $ ../fmapb2 -test ../example/subA.pqr 0.1 25
+    $ diff parms.txt parms.txt.bak
 
 #### References:
 
